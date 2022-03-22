@@ -24,8 +24,8 @@ public class BasicServlet implements Servlet {
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         logger.info("New request");
-
-        servletResponse.getWriter().println("<h1>Servlet content</h1>");
+        servletResponse.setContentType("text/html");
+        servletResponse.getWriter().printf("<h1>Servlet content</h1>");
     }
 
     @Override
