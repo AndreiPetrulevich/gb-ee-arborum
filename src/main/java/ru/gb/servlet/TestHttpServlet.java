@@ -29,6 +29,8 @@ public class TestHttpServlet extends HttpServlet {
         resp.getWriter().printf("<h2>New Get request with parameters param1 = %s; param2 = %s</h2>",
                 req.getParameter("param1"),
                 req.getParameter("param2"));
+
+        getServletContext().getRequestDispatcher("/basic_servlet").forward(req, resp);
     }
 
     @Override
